@@ -3,8 +3,6 @@ FROM ubuntu:latest
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG BRANCH="main"
 
-EXPOSE 10444
-
 ENV keys="generate"
 ENV harvester="false"
 ENV farmer="false"
@@ -22,6 +20,7 @@ RUN git clone --branch ${BRANCH} https://github.com/silicoin-network/silicoin-bl
 
 ENV PATH=/silicoin-blockchain/venv/bin/:$PATH
 
+EXPOSE 10444
 WORKDIR /silicoin-blockchain
 
 COPY ./entrypoint.sh entrypoint.sh
