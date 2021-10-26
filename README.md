@@ -7,8 +7,9 @@ https://www.silicoin.cc/
 Required configuration:
 * Publish network port via `-p 10444:10444`
 * Bind mounting a host plot dir in the container to `/plots`  (e.g. `-v /path/to/hdd/storage/:/plots`)
-* Bind mounting a host config dir in the container to `/root/.silicoin`  (e.g. `-v /path/to/storage/:/root/.silicoin`)
-* Set initial `silicoin keys add` method:
+* Bind mounting a host config dir in the container to `/root/.sit`  (e.g. `-v /path/to/storage/:/root/.sit`)
+* Bind mounting a host config dir in the container to `/root/.sit_keys`  (e.g. `-v /path/to/storage/:/root/.sit_keys`)
+* Set initial `sit keys add` method:
   * Manual input from docker shell via `-e KEYS=type` (recommended)
   * Copy from existing farmer via `-e KEYS=copy` and `-e CA=/path/to/mainnet/config/ssl/ca/` 
   * Add key from mnemonic text file via `-e KEYS=/path/to/mnemonic.txt`
@@ -20,14 +21,15 @@ Optional configuration:
 
 On first start with recommended `-e KEYS=type`:
 * Open docker shell `docker exec -it <containerid> sh`
-* Enter `silicoin keys add`
+* Enter `sit keys add`
 * Paste space-separated mnemonic words
 * Restart docker cotainer
-* Enter `silicoin wallet show`
+* Enter `sit wallet show`
 * Press `S` to skip restore from backup
 
 ## Operation
 * Open docker shell `docker exec -it <containerid> sh`
-* Check synchronization `silicoin show -s -c`
-* Check farming `silicoin farm summary`
-* Check balance `silicoin wallet show` 
+* Check synchronization `sit show -s -c`
+* Check farming `sit farm summary`
+* Check balance `sit wallet show`
+* 
