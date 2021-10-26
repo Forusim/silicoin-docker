@@ -5,7 +5,7 @@ https://www.silicoin.cc/
 
 ## Configuration
 Required configuration:
-* Publish network port via `-p 10444:10444`
+* Publish network port via `-p 11444:11444`
 * Bind mounting a host plot dir in the container to `/plots`  (e.g. `-v /path/to/hdd/storage/:/plots`)
 * Bind mounting a host config dir in the container to `/root/.sit`  (e.g. `-v /path/to/storage/:/root/.sit`)
 * Bind mounting a host config dir in the container to `/root/.sit_keys`  (e.g. `-v /path/to/storage/:/root/.sit_keys`)
