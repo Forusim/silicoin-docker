@@ -20,7 +20,7 @@ RUN git clone --branch ${BRANCH} https://github.com/silicoin-network/silicoin-bl
 
 ENV PATH=/silicoin-blockchain/venv/bin/:$PATH
 
-EXPOSE 10444
+EXPOSE 11444
 WORKDIR /silicoin-blockchain
 
 COPY ./entrypoint.sh entrypoint.sh
